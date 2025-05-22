@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestionar paquetes</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Gestionar paquetes de horas</h2>
+
+    <div class="contenedor-columnas">
+      <div class="columna">
+        <h3>🟢 Activos</h3>
+        <div id="activos" class="caja-scroll zona-drop" data-tipo="activo"></div>
+      </div>
+      <div class="columna">
+        <h3>🔴 Desactivados</h3>
+        <div id="desactivados" class="caja-scroll zona-drop" data-tipo="desactivado"></div>
+      </div>
+    </div>
+
+    <button id="guardar-cambios">Guardar cambios</button>
+    <p id="estado"></p>
+  </div>
+
+  <script src="../js/gestionarPaquete.js"></script>
+</body>
+</html>

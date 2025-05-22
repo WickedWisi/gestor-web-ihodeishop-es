@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modificar Cena</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Modificar Cena de Chistes</h2>
+
+    <label for="fecha">Fecha del evento</label>
+    <input type="date" id="fecha">
+
+    <label for="hora">Hora del evento</label>
+    <input type="time" id="hora">
+
+    <label for="lugar">Dirección exacta del evento (como en Google Maps)</label>
+    <input type="text" id="lugar" placeholder="Ej: Calle Gran Vía 23, 28013 Madrid, España" autocomplete="off">
+    <small style="color: gray; display: block; margin-bottom: 10px;">
+      Escribe la dirección completa como aparece en Google Maps (calle, número, ciudad, país).
+    </small>
+    
+    <label for="stock">Entradas disponibles</label>
+    <input type="number" id="stock" min="0">
+
+    <label for="precio">Precio (€)</label>
+    <input type="number" id="precio" min="0" step="0.01">
+
+    <label for="imagenEntrada">Nueva imagen de entrada (opcional)</label>
+    <input type="file" id="imagenEntrada" accept="image/*">
+
+    <button id="guardarCena">Guardar cambios</button>
+    <p id="estado"></p>
+  </div>
+
+  <script src="../js/modificarCena.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Añadir Cena</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Añadir nueva Cena de Chistes</h2>
+
+    <label for="fecha">Fecha del evento</label>
+    <input type="date" id="fecha" required>
+
+    <label for="hora">Hora del evento</label>
+    <input type="time" id="hora" required>
+
+    <label for="lugar">Dirección exacta del evento (como en Google Maps)</label>
+    <input type="text" id="lugar" placeholder="Ej: Calle Gran Vía 23, 28013 Madrid, España" required>
+    <small style="color: gray; display: block; margin-bottom: 10px;">
+      Escribe la dirección completa como aparece en Google Maps (calle, número, ciudad, país).
+    </small>
+
+    <label for="stock">Entradas disponibles</label>
+    <input type="number" id="stock" min="1" required>
+
+    <label for="precio">Precio (€)</label>
+    <input type="number" id="precio" min="0" step="0.01" required>
+
+    <label for="imagenEntrada">Imagen de la entrada (PNG/JPG)</label>
+    <input type="file" id="imagenEntrada" accept="image/*" required>
+
+    <button id="guardarCena">Guardar cena</button>
+    <p id="estado"></p>
+  </div>
+
+  <script src="../js/anadirCena.js"></script>
+</body>
+</html>

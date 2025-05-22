@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Introducir Producto</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Añadir producto</h2>
+
+    <label for="nombre">Nombre del producto</label>
+    <input type="text" id="nombre" placeholder="Nombre del producto">
+
+    <label for="categoria">Nombre de la categoría</label>
+    <input list="lista-categorias" id="categoria" placeholder="Nombre de la categoría">
+    <datalist id="lista-categorias"></datalist>
+
+    <label for="descCorta">Descripción corta</label>
+    <textarea id="descCorta" placeholder="Descripción corta"></textarea>
+
+    <label for="precio">Precio (€)</label>
+    <input type="number" id="precio" placeholder="Precio (€)">
+
+    <label for="descripcion">Descripción larga</label>
+    <textarea id="descripcion" placeholder="Descripción larga"></textarea>
+
+    <label>Características</label>
+    <div id="lista-caracteristicas" class="lista-caracteristicas"></div>
+    <button id="agregar-caracteristica" class="btn-pequeno">+ Agregar Característica</button>
+
+    <label for="imagenArchivo">Selecciona imagen:</label>
+    <input type="file" id="imagenArchivo" accept="image/*">
+    <input type="hidden" id="imagen">
+
+    <button id="guardar">Guardar</button>
+    <p id="estado"></p>
+  </div>
+
+  <!-- Modal para añadir/editar característica -->
+  <div id="modal-caracteristica" class="modal">
+    <div class="modal-contenido">
+      <h3 id="titulo-modal">Nueva característica</h3>
+      <input type="text" id="input-caracteristica" placeholder="Escribe aquí">
+      <div class="modal-botones">
+        <button id="cancelar-modal">Cancelar</button>
+        <button id="confirmar-modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/anadir.js"></script>
+</body>
+</html>
